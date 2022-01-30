@@ -31,7 +31,6 @@ class array-merge-sort
         }                
     }
     
-
     // This method merges two arrays of Strings
     public static String[] mergeSortedArrays(String[] a1, String[] a2)
     {
@@ -49,7 +48,29 @@ class array-merge-sort
         return merged;        
     }
     
-    //method that compares two strings and returns TRUE if the first string is alphabetically bigger than the second
+    // Method that alphabetically bubble sorts elements inside an array of strings
+    public static String[] bubbleSort(String [] array)
+    {
+    	int BubbleEnd = array.length-1;
+    	boolean swapped = true;
+    	
+    	while (swapped == true)
+    	{
+    		swapped = false;
+    		for (int i = 0; i<BubbleEnd; i++)
+        	{
+        		if (IsBigger(array[i], array[i+1]))
+        		{
+        			Swap(array, i, i+1);
+        			swapped = true;
+        		}
+        	}
+    		BubbleEnd --;
+    	}    	
+    	return array;    	
+    }
+    
+    // Method that compares two strings and returns TRUE if the first string is alphabetically bigger than the second
     public static boolean IsBigger(String left, String right)
     {
     	boolean leftIsBigger;
@@ -83,29 +104,7 @@ class array-merge-sort
     	return leftIsBigger;
     }
     
-    //Method that alphabetically bubble sorts elements inside an array of strings
-    public static String[] bubbleSort(String [] array)
-    {
-    	int BubbleEnd = array.length-1;
-    	boolean swapped = true;
-    	
-    	while (swapped == true)
-    	{
-    		swapped = false;
-    		for (int i = 0; i<BubbleEnd; i++)
-        	{
-        		if (IsBigger(array[i], array[i+1]))
-        		{
-        			Swap(array, i, i+1);
-        			swapped = true;
-        		}
-        	}
-    		BubbleEnd --;
-    	}    	
-    	return array;    	
-    }
-    
-    //Method that swaps position a and b in an array of Strings
+    // Method that swaps position a and b in an array of Strings
     public static void Swap(String[] array, int a, int b)
     {
     	String temp = array[a];

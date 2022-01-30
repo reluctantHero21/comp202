@@ -11,20 +11,20 @@ class array-merge-sort
         String[] section3 = {"Bach, Johann Sebastian", "Beethoven, Ludwig van", 
                              "Mozart, Wolfgang Amadeus", "Schumann, Clara"};
         
-		// merge the first two section		
+	// merge the first two section		
         String[] merged = mergeSortedArrays(section1, section2);
 		
         // merge the third section
 		merged = mergeSortedArrays(merged, section3);
         
-		// sort the merged array
+	// sort the merged array
         merged = bubbleSort(merged);
         
         // display confirmation of merge & sort
         int entries = merged.length;
         System.out.println(entries+" entries successfully merged and sorted." + "\n");
         
-		// print the merged & sorted array
+	// print the merged & sorted array
         for (int i = 0; i<entries; i++)
         {
         	System.out.println(merged[i]);

@@ -1,5 +1,5 @@
 ## Merge and order arrays
-Java program that takes arrays of strings, merges them into one array, and orders elements in alphabetical order using bubble sort
+Java program that merges and sorts arrays of strings alphabetically using bubble sort
 
 ### My code
 [array-merge-sort.java](/java/array-merge-sort/array-merge-sort.java)
